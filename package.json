@@ -13,8 +13,10 @@
     "@oclif/plugin-help": "^2"
   },
   "devDependencies": {
+    "@oclif/dev-cli": "^1",
     "@oclif/test": "^1",
     "chai": "^4",
+    "globby": "^8",
     "mocha": "^5",
     "nyc": "^13"
   },
@@ -23,6 +25,8 @@
   },
   "files": [
     "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
     "/src"
   ],
   "homepage": "https://github.com/gem-partij/gemboot-cli",
@@ -32,10 +36,17 @@
   "license": "MIT",
   "main": "src/index.js",
   "oclif": {
-    "bin": "gemboot"
+    "commands": "./src/commands",
+    "bin": "gemboot",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
   },
   "repository": "gem-partij/gemboot-cli",
   "scripts": {
-    "test": "nyc mocha --forbid-only \"test/**/*.test.js\""
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
   }
 }
