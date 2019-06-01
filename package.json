@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Angger Priyardhan Putro",
   "bin": {
-    "gemboot-cli": "./bin/run"
+    "gemboot": "./bin/run"
   },
   "bugs": "https://github.com/gem-partij/gemboot-cli/issues",
   "dependencies": {
@@ -32,7 +32,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "oclif": {
-    "bin": "gemboot-cli"
+    "bin": "gemboot"
   },
   "repository": "gem-partij/gemboot-cli",
   "scripts": {
