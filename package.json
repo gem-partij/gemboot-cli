@@ -1,7 +1,7 @@
 {
   "name": "gemboot-cli",
   "description": "Standard Tooling for Gem Boot JS Development",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Angger Priyardhan Putro",
   "bin": {
     "gemboot": "./bin/run"
