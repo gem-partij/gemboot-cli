@@ -15,6 +15,18 @@ class CreateCommand extends Command {
     );
 
     await CreateCommand.run(["--help"]);
+
+    // clone gemboot js repository
+    // git clone https://github.com/gem-partij/Gem-Boot-JS [project-name]
+    // atau git clone --depth 1 -b <branch> https://github.com/gem-partij/Gem-Boot-JS [project-name]
+
+    // cd into that folder
+
+    // remove/delete folder .git
+
+    // npm install
+
+    // copy .env.dev to .env
   }
 }
 
