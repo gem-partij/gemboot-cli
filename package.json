@@ -1,0 +1,41 @@
+{
+  "name": "gemboot-cli",
+  "description": "Standard Tooling for Gem Boot JS Development",
+  "version": "1.0.0",
+  "author": "Angger Priyardhan Putro",
+  "bin": {
+    "gemboot-cli": "./bin/run"
+  },
+  "bugs": "https://github.com/gem-partij/gemboot-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "mocha": "^5",
+    "nyc": "^13"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/gem-partij/gemboot-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "gemboot-cli"
+  },
+  "repository": "gem-partij/gemboot-cli",
+  "scripts": {
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\""
+  }
+}
